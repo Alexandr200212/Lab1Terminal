@@ -6,4 +6,10 @@ def eratosthenes(n):
             primes.append(p)
             for i in range(p*p, n+1, p):
                 is_prime[i] = False
-    return prime
+    return primes
+
+
+def print_primes(n):
+    primes = eratosthenes(n)
+    for p in primes:
+        print(p, end=' ')
